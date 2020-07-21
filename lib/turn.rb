@@ -22,11 +22,17 @@ def display_board(board)
   puts " #{board[6]} | #{board[7]} | #{board[8]} "
 end
 
+def input_to_index(user_input)
+  user_input.to_i - 1
+end
+
 def move(board,position,char = "X")
 
     board[position] = char
 end
 
-def turn(board)
+def turn(board, index,char)
+
   puts "Please enter 1-9:"
+  input_to_index(index)
 end
